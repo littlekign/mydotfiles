@@ -77,6 +77,21 @@ sudo apt-get install ultra-flat-icons
 7, Use ‘Ctrl+space’ to switch between input methods
 
 
+#ubuntu 16.04 config the shdowsocks-qt5 + gfwlist.pac
+1.install the genpac
+pip install genpac
+
+2.convert gfwlist to autoproxy.pac
+genpac --proxy="SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" -o autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+
+3.config the network proxy automatic
+eg:file:///home/lk/Downloads/autoproxy.pac
+
+
+
+
+
+
 
 
 
