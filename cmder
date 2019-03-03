@@ -1,0 +1,14 @@
+set PATH=%ConEmuBaseDir%\Scripts;%PATH%
+ 
+alias xampp=cd /d d:\xampp
+ 
+alias desktop=cd C:\Users\Administrator\Desktop
+ 
+ 
+alias subl="C:\Program Files\Sublime Text 3\sublime_text.exe"
+ 
+alias atom="C:\Users\Administrator\AppData\Local\atom\atom.exe"
+ 
+alias pa=php artisan $*
+ 
+alias gt=git clone $*
