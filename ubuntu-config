@@ -105,6 +105,11 @@ sudo apt-get update
 sudo apt-get install shadowsocks-qt5
 https://www.litcc.com/2016/12/29/Ubuntu16-shadowsocks-pac/index.html
 
+#linux albert simmlar like wox on window for quickly search applications in system
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install albert
+
 
 
 
