@@ -1,0 +1,22 @@
+{
+  "sync.gist": "cd4b0be09d287adda531fc410192004c",
+  "window.zoomLevel": 1,
+  "editor.formatOnSave": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
+  "vim.vimrc.path": "C:\\Users\\Administrator\\.vimrc",
+  "vim.leader": ",",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "e"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "after": ["^"]
+    }
+  ]
+}
