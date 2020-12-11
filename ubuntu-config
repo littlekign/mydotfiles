@@ -112,7 +112,11 @@ sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt-get update
 sudo apt-get install albert
 
-
+// installing the vm-tools
+# UBUNTU 20.04 SERVER:
+$ apt install open-vm-tools
+# UBUNTU 20.04 DESKTOP:
+$ apt install open-vm-tools-desktop open-vm-tools
 
 
 
