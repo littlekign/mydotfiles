@@ -3,10 +3,6 @@
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c2996b17b20c8f492db9f9527b1eeffe35352f2
 if has('vim_starting')
   set nocompatible               " Be iMproved
 endif
@@ -35,7 +31,6 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
@@ -52,7 +47,6 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
-Plug 'henrik/vim-yaml-flattener'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -86,7 +80,6 @@ Plug 'tomasr/molokai'
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
-
 
 " html
 "" HTML Bundle
@@ -140,8 +133,6 @@ set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
-set cursorline 
-set cursorcolumn
 
 "" Map leader to ,
 let mapleader=','
@@ -204,11 +195,7 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 9c2996b17b20c8f492db9f9527b1eeffe35352f2
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
@@ -216,11 +203,7 @@ else
       set term=xterm-256color
     endif
   endif
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 9c2996b17b20c8f492db9f9527b1eeffe35352f2
 endif
 
 
@@ -408,66 +391,12 @@ cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>bb :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 
-<<<<<<< HEAD
-" youcompleteme
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/youcompleteme/.ycm_extra_conf.py'
-
-function! g:UltiSnips_Complete()
-  call UltiSnips#ExpandSnippet()
-  if g:ulti_expand_res == 0
-    if pumvisible()
-      return "\<C-n>"
-    else
-      call UltiSnips#JumpForwards()
-      if g:ulti_jump_forwards_res == 0
-        return "\<TAB>"
-      endif
-    endif
-  endif
-  return ""
-endfunction
-
-function! g:UltiSnips_Reverse()
-  call UltiSnips#JumpBackwards()
-  if g:ulti_jump_backwards_res == 0
-    return "\<C-P>"
-  endif
-
-  return ""
-endfunction
-
-
-if !exists("g:UltiSnipsJumpForwardTrigger")
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-endif
-
-if !exists("g:UltiSnipsJumpBackwardTrigger")
-  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-endif
-
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger     . " <C-R>=g:UltiSnips_Complete()<cr>"
-au InsertEnter * exec "inoremap <silent> " .     g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
-
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<Right>"
-"let g:UltiSnipsJumpForwardTrigger="<S-f>"
-"let g:UltiSnipsJumpBackwardTrigger="<S-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<Left>"
-
-" snippets
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-" let g:UltiSnipsEditSplit="vertical"
-"
-=======
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
->>>>>>> 9c2996b17b20c8f492db9f9527b1eeffe35352f2
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_error_symbol='✗'
@@ -534,19 +463,16 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
-
 " code commentary
 autocmd FileType apache setlocal commentstring = #\ %s
 
 " map quick exit
 noremap <leader>qq :q!<enter>
 noremap <leader>ww :w
-noremap <leader><leader> <esc>
 
 " ^ $ map E B
 noremap <leader>b ^
 noremap <leader>e $
-
 
 " html
 " for html files, 2 spaces
@@ -591,7 +517,7 @@ let g:airline#extensions#virtualenv#enabled = 1
 
 " Syntax highlight
 " Default highlight is better than polyglot
-" let g:polyglot_disabled = ['python']
+let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
 
 

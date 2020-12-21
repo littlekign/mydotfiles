@@ -1,0 +1,137 @@
+sublime text3 configuration https://mattstauffer.com/blog/sublime-text-3-for-php-developers/
+
+sudo apt-get update
+
+sudo apt-get upgrade 
+
+# system env
+sudo apt-get install curl && wget && screenfetch && htop && vim && git && tmux
+
+# python env
+1.python install pip
+sudo apt-get install python-pip 
+
+2.python install virtualenv 
+pip install virtualenv => venv/lib/python2.7
+
+pip3 install virtualenv => venv/lib/python3.5
+
+#pip upgrade
+pip install -U pip
+
+#change python mirror douban
+1.linux 
+~/.pip/pip.conf 
+2.windows 
+%HOME%\pip\pip.ini 
+
+[global] 
+index-url = http://pypi.douban.com/simple 
+trusted-host = pypi.douban.com 
+
+
+
+
+
+
+# node env
+1.nvm install 
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+2.change node mirror taobao
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/  && npm install -g cnpm
+
+
+
+
+# zsh env
+1.sudo apt-get update && sudo apt-get -y install zsh
+
+2.oh-my-zsh install 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# ubuntu desktop flat theme install
+1.install the control panel
+sudo apt-get install unity-tweak-tool
+
+2.If you are on Ubuntu 16.04 or higher, run the commands below to install Ubuntu Tweak:
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+sudo apt-get update
+sudo apt-get install ubuntu-tweak
+
+3. Using the noobslab PPA Theme
+sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install flatabulous-theme
+
+4. Flat Icons
+sudo add-apt-repository ppa:noobslab/icons
+sudo apt-get update
+sudo apt-get install ultra-flat-icons
+
+# Install google pinyin in Ubuntu 16.04
+1. Command line: sudo apt-get install fcitx-googlepinyin
+2. System settings -> Language support -> Keyboard input method system, change to fcitx.
+3. Log out log in
+4. At top right, click the penguin icon -> Text entry setting
+5. Click +
+6. Search ‘Google’, find ‘Google Pinyin (Fcitx)’
+7, Use ‘Ctrl+space’ to switch between input methods
+
+
+#ubuntu 16.04 config the shdowsocks-qt5 + gfwlist.pac
+1.install the genpac
+pip install genpac
+
+2.convert gfwlist to autoproxy.pac
+genpac --proxy="SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" -o autoproxy.pac --gfwlist-url="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+
+3.config the network proxy automatic
+eg:file:///home/lk/Downloads/autoproxy.pac
+
+
+
+#ubuntu display real time network 
+
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
+
+sudo apt-get update
+
+sudo apt-get install indicator-sysmonitor
+
+
+#ubuntu shadowsocks-qt5
+
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+https://www.litcc.com/2016/12/29/Ubuntu16-shadowsocks-pac/index.html
+
+#linux albert simmlar like wox on window for quickly search applications in system
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install albert
+
+// installing the vm-tools
+# UBUNTU 20.04 SERVER:
+$ apt install open-vm-tools
+# UBUNTU 20.04 DESKTOP:
+$ apt install open-vm-tools-desktop open-vm-tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
