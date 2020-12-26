@@ -1,0 +1,123 @@
+"----------------------------------------------------------------------------
+" 基本設定
+"----------------------------------------------------------------------------
+set clipboard=unnamed,autoselect          "クリップボードOSと連携する
+set backspace=indent,eol,start  "バックスペースでインデントや改行を削除できるようにする
+set wildmenu
+set cursorline                  "カーソルラインを表示する
+set number                      "行番号の表示
+set scrolloff=5                 "スクロールし始める行数
+set whichwrap=b,s,h,l,<,>,[,],~     "特定のキーに行頭および行末の回りこみ移動を許可する設定
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set bomb
+set binary
+set ttyfast
+
+"" Fix backspace indent
+set backspace=indent,eol,start
+
+"" Tabs. May be overriten by autocmd rules
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
+set cursorline 
+set cursorcolumn
+
+"" Map leader to ,
+let mapleader=','
+
+
+"----------------------------------------------------------------------------
+"検索
+"----------------------------------------------------------------------------
+set noignorecase                "検索時　大文字小文字を区別する
+set smartcase                   "大文字で検索されたら対象を大文字限定にする
+set incsearch                   "インクリメンタルサーチを有効にする
+set hlsearch                    "強調表示
+
+"----------------------------------------------------------------------------
+"フォーマット設定
+"----------------------------------------------------------------------------
+set autoindent                  "自動的にインデントする
+set expandtab                   "タブ設定
+set tabstop=2
+set shiftwidth=2
+
+"----------------------------------------------------------------------------
+" visual studio用のキー設定
+"----------------------------------------------------------------------------
+"戻るを再現
+nmap <C-O> :vsc View.NavigateBackward<CR>
+nmap <C-I> :vsc View.NavigateForward<CR>
+
+"定義へ移動
+nmap <C-]> :vsc Edit.GoToDefinition<CR>
+
+"コメント化
+map ,, :vsc Edit.CommentSelection<cr>
+"コメント解除
+map ,c :vsc Edit.CommentSelection<cr>
+
+"今いるタブ以外を消す
+noremap to :vsc File.CloseAllButThis<cr>
+
+"-------------------------------------------------------------------------------
+" 自己流カスタマイズ
+"-------------------------------------------------------------------------------
+"タブ移動を早くする
+map t1 1gt
+map t2 2gt
+map t3 3gt
+map t4 4gt
+map t5 5gt
+map t6 6gt
+map t7 7gt
+map t8 8gt
+map t9 9gt
+map t0 10gt
+
+"単語の上書きペースト
+"nnoremap <silent> rp ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+
+"コピーした文字で繰り返し上書きペーストする
+vnoremap <silent> 0p "0p<CR>
+
+" 検索語に中央に移動
+map n nzz
+map N Nzz
+map * *zz
+map # #zz
+
+"行の折り返しをしているとき、見た目の次の行へ移動する
+nnoremap j gj
+nnoremap k gk
+
+" ESCを二回押すことでハイライトを消す
+" nmap <silent> <Esc><Esc> :nohlsearch<CR>
+
+
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
+
+" basic operator
+noremap <leader>z :bp<CR>
+noremap <leader>q :bp<CR>
+noremap <leader>x :bn<CR>
+noremap <leader>w :bn<CR>
+noremap <leader>c :bd<CR>
+noremap <leader>qq :q!<enter>
+noremap <leader>ww :w
+noremap <leader><leader> <esc>
+noremap <leader>b ^
+noremap <leader>e $
+
+" comment in vsvimrc
+nnoremap gcc :vsc Edit.CommentSelection<CR>
+vnoremap gc :vsc Edit.CommentSelection<CR>
