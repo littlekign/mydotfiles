@@ -12,3 +12,12 @@ alias atom="C:\Users\Administrator\AppData\Local\atom\atom.exe"
 alias pa=php artisan $*
  
 alias gt=git clone $*
+
+# linux、mac 配置alais
+alias proxy='export http_proxy=http://127.0.0.1:1087 && export https_proxy=http://127.0.0.1:1087'
+alias unproxy='unset http_proxy && unset https_proxy'
+
+#windows配置alias(基于cmder)
+proxy=set http_proxy=socks5://127.0.0.1:10808&&set https_porxy=socks5://127.0.0.1:10808
+unproxy=set http_proxy=&&set https_proxy=
+# 注意：以上 windows 基于 cmder 的配置中 `&&` 符号前后均不能由空格，否则会被记做命令内容
