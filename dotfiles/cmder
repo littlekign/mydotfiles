@@ -1,3 +1,7 @@
+！开启cmder autosuggestion
+clink set autosuggest.enable true
+
+
 set PATH=%ConEmuBaseDir%\Scripts;%PATH%
  
 alias xampp=cd /d d:\xampp
