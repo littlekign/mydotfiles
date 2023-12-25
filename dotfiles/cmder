@@ -21,3 +21,34 @@ alias unproxy='unset http_proxy && unset https_proxy'
 proxy=set http_proxy=socks5://127.0.0.1:10808&&set https_porxy=socks5://127.0.0.1:10808
 unproxy=set http_proxy=&&set https_proxy=
 # 注意：以上 windows 基于 cmder 的配置中 `&&` 符号前后均不能由空格，否则会被记做命令内容
+
+
+set PATH=%ConEmuBaseDir%\Scripts;%PATH%
+ 
+set PATH=%ConEmuBaseDir%\Scripts;%PATH%
+ 
+alias xampp=cd /d d:\xampp
+ 
+alias desktop=cd C:\Users\sec_lk\Desktop
+ 
+ 
+alias subl="C:\Program Files\Sublime Text 3\sublime_text.exe"
+ 
+alias atom="C:\Users\Administrator\AppData\Local\atom\atom.exe"
+ 
+alias pa=php artisan $*
+ 
+alias gt=git clone $*
+ 
+alias gs=git status 
+ 
+alias gl=git log --pretty=short
+ 
+alias ll=ls -la
+ 
+alias proxy=set http_proxy=http://192.168.0.28:10811&&set https_porxy=https://192.168.0.28:10811
+alias unproxy=set http_proxy=&&set https_proxy=
+ 
+alias codes=D: && cd ..&&cd ..&&cd ..&&cd ..&&cd codes
+ 
+alias fapi=uvicorn main:app --reload
